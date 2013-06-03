@@ -18,15 +18,6 @@
     <Image Include="res\Game.ico">
       <Filter>resource</Filter>
     </Image>
-    <Image Include="..\Resources\CloseSelected.png">
-      <Filter>resource</Filter>
-    </Image>
-    <Image Include="..\Resources\CloseNormal.png">
-      <Filter>resource</Filter>
-    </Image>
-    <Image Include="..\Resources\HelloWorld.png">
-      <Filter>resource</Filter>
-    </Image>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc">
@@ -46,6 +37,18 @@
     <ClInclude Include="..\Classes\HelloWorldScene.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\External\inifile\inifile.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\ResourceManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Singleton.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Utilities.h">
+      <Filter>include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -55,6 +58,12 @@
       <Filter>source</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\External\inifile\inifile.cpp">
+      <Filter>source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\ResourceManager.cpp">
       <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>

@@ -48,7 +48,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <AdditionalIncludeDirectories>.;..\Classes;$(SolutionDir)..\External\cocos2d-x\cocos2dx;$(SolutionDir)..\External\cocos2d-x\cocos2dx\include;$(SolutionDir)..\External\cocos2d-x\cocos2dx\kazmath\include;$(SolutionDir)..\External\cocos2d-x\cocos2dx\platform\win32;$(SolutionDir)..\External\cocos2d-x\cocos2dx\platform\third_party\win32;$(SolutionDir)..\External\cocos2d-x\cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)..\External\cocos2d-x\external;$(SolutionDir)..\External\cocos2d-x\CocosDenshion\include;$(SolutionDir)..\External\cocos2d-x\scripting\lua\cocos2dx_support;$(SolutionDir)..\External\cocos2d-x\scripting\lua\tolua;$(SolutionDir)..\External\cocos2d-x\scripting\lua\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.;..\Classes;$(SolutionDir)..\External\cocos2d-x\cocos2dx;$(SolutionDir)..\External\cocos2d-x\cocos2dx\include;$(SolutionDir)..\External\cocos2d-x\cocos2dx\kazmath\include;$(SolutionDir)..\External\cocos2d-x\cocos2dx\platform\win32;$(SolutionDir)..\External\cocos2d-x\cocos2dx\platform\third_party\win32;$(SolutionDir)..\External\cocos2d-x\cocos2dx\platform\third_party\win32\OGLES;$(SolutionDir)..\External\cocos2d-x\external;$(SolutionDir)..\External\cocos2d-x\CocosDenshion\include;$(SolutionDir)..\External\cocos2d-x\scripting\lua\cocos2dx_support;$(SolutionDir)..\External\cocos2d-x\scripting\lua\tolua;$(SolutionDir)..\External\cocos2d-x\scripting\lua\lua;$(SolutionDir)..\External\inifile;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
@@ -56,7 +56,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS_DEBUG;COCOS2D_DEBUG=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;STRICT;_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS_DEBUG;COCOS2D_DEBUG=1;CC_ENABLE_BOX2D_INTEGRATION=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4267;4251;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
     </ClCompile>
     <Link>
@@ -118,23 +118,26 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <Image Include="..\Resources\CloseNormal.png" />
-    <Image Include="..\Resources\CloseSelected.png" />
-    <Image Include="..\Resources\HelloWorld.png" />
     <Image Include="res\Game.ico" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Game.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\..\External\inifile\inifile.h" />
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\ResourceManager.h" />
+    <ClInclude Include="..\Classes\Singleton.h" />
+    <ClInclude Include="..\Classes\Utilities.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\..\External\inifile\inifile.cpp" />
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\ResourceManager.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
